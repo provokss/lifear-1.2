@@ -1,0 +1,370 @@
+/*css de la page*/
+body{
+background-image: linear-gradient(to top left, #414141, #676767);
+color: rgb(222, 222, 222);
+text-align: center;
+
+}
+
+ul, li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/*css des texts*/
+.text_navbar{
+  font-family: cursive;
+  font-size: 17px;
+  font-style: normal; /* ou normal */
+  font-weight: bolder; /* ou bold, etc. */
+  font-style: normal; /* ou normal */
+}
+
+.texte {
+  font-family: Arial ;
+  font-size: 18px;
+  font-weight: bolder; /* ou bold, etc. */
+  font-style: normal; /* ou normal */
+  text-transform: lowercase; /* ou lowercase, capitalize, etc. */
+  line-height: 1.7; /* Ajustez selon vos besoins */
+}
+
+.text-center {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 23px;
+  display: block;
+  text-align: center;
+}
+/*fin des texts*/
+
+
+/*debut du css de la navbar*/
+.navbar {
+    background-color: #c2c2c2;
+    overflow: hidden;
+    white-space: nowrap;
+    position: fixed;
+    width: 99%; /* Occupe toute la largeur de l'écran */
+}
+
+.navbar a {
+    display: inline-block; /* Utilisez display: inline-block pour que les liens apparaissent côte à côte */
+    color: #272727;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+  
+  .navbar .icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.navbar.responsive .icon {
+    display: block;
+}
+
+.navbar .fermer {
+  font-size: 24px;
+  margin-right: 20px;
+  position: fixed;
+  top: 15px;
+  right: 10px;
+  flex-direction: column;
+}
+
+.navbar .fermer .barre {
+  width: 25px; /* Réduit la largeur des barres */
+  height: 3px; /* Réduit la hauteur des barres */
+  background-color: #000;
+  margin: 3px 0; /* Ajuste la marge verticale */
+}
+
+  /*definir les pixel et changer le css*/
+  @media screen and (max-width: 899px) {
+    .navbar a:not(:first-child) {display: none;}
+    .navbar a.icon {
+        float: right;
+        display: block;
+    }
+    .navbar.responsive a {
+        display: block;
+        float: none;
+        width: 100%; /* Prend toute la largeur disponible */
+        text-align: left;
+    }
+  }
+  
+  .navbar.responsive {
+    position: relative;
+    overflow-y: auto; /* Active le défilement vertical si nécessaire */
+    max-height: 30vh; /* Limite la hauteur pour éviter qu'il prenne tout l'écran */
+  }
+/*fin du css de la navbar*/
+
+
+/*debut du css des etoile*/
+.star-rating {
+    display: inline-block;
+    font-size: 0;
+    unicode-bidi: bidi-override;
+    direction: rtl;
+  }
+  
+  .star-rating > input {
+    display: none;
+  }
+  
+  .star-rating > label {
+    display: inline-block;
+    font-size: 24px;
+    color: #bbb;
+    cursor: pointer;
+  }
+  
+  .star-rating > input:checked ~ label,
+  .star-rating > input:checked ~ label ~ label {
+    color: #f90;
+  }
+/*fin du css des etoile*/
+
+
+/*debut des popup*/
+
+  /* bouton des popup*/
+  .confirmation-button-oui{
+    background-color: #36762a;
+  }
+  
+  .confirmation-button-non {
+    background-color: #c13939;
+  }
+  
+  .confirmation-button-non, 
+  .confirmation-button-oui{
+    color:rgb(222, 222, 222);
+    padding: 10px 10px;
+    border-radius: 3cqb;    font-family: cursive;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 10px;
+  }
+    /* Masquez la forme du Popup */
+  .confirmation-form {
+    border-radius: 10px;
+    background-color: #3b2e2e;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid rgb(0, 0, 0);
+    width: 80%;
+    max-width: 500px;
+    box-shadow:  61px 51px 45px -2px rgba(10, 10, 10, 0.6);
+  }
+  .confirmation-popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .commander-form {
+    display: none;
+    position: fixed;
+    left: 45%;
+    top: 15%;
+    transform: translate(-45%, 5%);
+    border: 2px solid;
+    z-index: 9;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: #3b2e2e;
+    color: rgb(222, 222, 222);
+  }
+  .commander-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3b2e2e;
+    z-index: 8;
+    display: none;
+  }
+
+  /* fin du Popup */
+
+
+/*style des boutons*/
+.order-btn{
+  font-family: cursive;
+  color: #fff;
+  background-color: #e74c3c;
+  border: none;
+  padding: 8px 15px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}  
+.order-btn:hover {
+  background-color: #c0392b;
+}
+
+.btn {
+  font-family: cursive;
+  color: #fff;
+  background-color: #e74c3c;
+  border: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+.btn:hover {
+  background-color: #c0392b;
+}
+
+  .btn-input {
+    font-family: cursive;
+    color: #fff;
+    background-color: #e74c3c;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-input:hover {
+    background-color: #c0392b;
+  }
+/*fin style des boutons*/
+
+
+  .box {
+    background-color: #333;
+    border-radius: 5px;
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .input-container,   
+  .file-input-container {
+    text-align: center;
+    position: relative;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  .file-input-container img{
+    border-radius: 50%;
+    border: 15px solid transparent;
+  }
+  .input-container label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 14px;
+    color: #fff;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+.input-container input, 
+.input-container select  {
+  border: 0;
+  border-bottom: 1px solid #555;
+  background: transparent;
+  width: 100%;
+  padding: 8px 0 5px 0;
+  font-size: 16px;
+  color: #fff;
+  outline: none;
+}
+
+.file-input-container input[type="file"] {
+  border-bottom: 1px solid #555;
+  background: transparent;
+  width: 100%;
+  padding: 8px 0 5px 0;
+  font-size: 16px;
+  color: #fff;
+  outline: none;
+  display: none;
+   box-sizing: border-box;
+}
+
+.input-container input:focus ~ label,
+.input-container input:valid ~ label {
+  top: -15px;
+  font-size: 12px;
+  }
+.input-container select:focus,
+.input-container select:hover,
+.input-container select option:hover,
+.input-container input:hover
+ {
+  background-color: #444;
+}
+  
+
+#customFileLabel {
+  border-bottom: 1.5px solid ;
+  border-color: #787878;
+  background-color: #444;
+  color: #fff;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+#fileName {
+  display: inline-block;
+  margin-left: 35px;
+  color: #fff;
+}
+
+  

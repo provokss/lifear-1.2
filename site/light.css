@@ -1,0 +1,291 @@
+
+  /* Styles pour afficher les articles  */
+  .article {
+    display: inline-block;
+    margin-right: 5px;
+    text-align: center;
+    background-color: #cb0101;
+    padding: 8px;
+    margin-top: 8px;
+    width: 200px;
+    border: 2px solid #000000;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .article img {
+    height: 120px;
+    margin-bottom: 3px;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+  
+  .article span {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 2px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .article p {
+    font-size: 10px;
+    margin: 3px;
+    color: #ffffff;
+  }
+  
+  /*message*/
+  .message {
+    color: #ccc9c9;
+    display: inline-block;
+    margin-right: 5px;
+    text-align: center;
+    background-color: #cb0101;
+    padding: 10px;
+    margin-top: 10px;
+    width: 20%;
+    border: 2px solid #000000;
+    border-radius: 15px;
+  }
+  
+/*fin message*/
+    /* Styles pour les boutons */
+    .order-btn {
+      cursor: pointer;
+      background-color: #e6569c;
+      border: none;
+      color: rgb(253, 253, 253);
+      padding: 8px 16px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+      border: 2px solid #000000;
+      border-radius: 50px;
+    }
+    
+    .btn-quantite {
+      background-color: #e6569c;
+      border: none;
+      color: white;
+      padding: 7px 12px;
+      text-align: center;
+      display: inline-block;
+      font-size: 14px;
+      margin: 3px 2px;
+      cursor: pointer;
+      border-radius: 8px;
+      border: 1px solid #000000;
+    }
+    
+    /* Styles pour les cadres */
+    .cadre {
+      border: 1px solid rgb(0, 0, 0);
+      background-color: #5e3cb3;
+      color: rgb(255, 255, 255);
+      text-align: center;
+      border-radius: 30px;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+    
+    .cadre2 {
+      border: 1px solid rgb(0, 0, 0);
+      background-color: #5e3cb3;
+      color: rgb(216, 211, 211);
+      text-align: center;
+      border-radius: 30px;
+      margin-left: 8%;
+      margin-right: 8%;
+    }
+    
+    .cadre3 {
+      border: 1px solid rgb(0, 0, 0);
+      background-color: #5e3cb3;
+      color: rgb(216, 211, 211);
+      text-align: center;
+      border-radius: 30px;
+      margin-left: 6%;
+      margin-right: 6%;
+    }
+    
+    .cadre4 {
+      border: 1px solid rgb(0, 0, 0);
+      background-color: #5e3cb3;
+      color: rgb(216, 211, 211);
+      text-align: center;
+      border-radius: 30px;
+      margin-left: 6%;
+      margin-right: 6%;
+      padding: 10px;
+    }
+    
+/*Pour la partie voir l'utilisateur(deconnection.php)*/
+.utilisateur {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #d53b3b;
+  border: 1px solid #000000;
+  border-radius: 15px;
+  font-family: Arial, sans-serif;
+}
+
+.image-utilisateur {
+  width: 250px;
+}
+
+.image-utilisateur img {
+  border: 1px solid #000000;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.utilisateur td {
+  text-align: center;
+  padding: 6px;
+  font-size: 12px;
+}
+
+/*Pour les partie view.php*/
+.voir_article {
+  max-width: 60%; /* Limitez la largeur du tableau à 60% de la largeur de l'écran */
+  margin: 0 auto;
+  margin-top: 30px;
+  border: 2px solid #000000;
+  background-color: #d53b3b;
+  border-radius: 25px;
+}
+.image-voir_article {
+  width: 350px;
+}
+.image-voir_article img {
+  width: 100%;
+  height: auto;
+  border-radius: 35px;
+  border: 2px solid #000000;
+}
+.voir_article td {
+  text-align: center;
+  padding: 10px;
+}
+
+/*pour le popup*/
+
+/* Stylez et fixez le bouton sur la page */
+.commander-button-oui {
+  background-color: #70ff57;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* Stylez et fixez le bouton sur la page */
+.commander-button-non {
+  background-color: #fa3c3c;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+/* Masquez la forme Popup */
+.commander-form {
+  display: none;
+  position: fixed;
+  left: 45%;
+  top: 35%;
+  transform: translate(-45%, 5%);
+  border: 2px solid;
+  z-index: 9;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: rgb(106, 90, 154);
+  color: rgb(0, 0, 0);
+}
+/* Styles pour le conteneur de la forme */
+.commander-container {
+  max-width: 450px;
+  padding: 20px;
+}
+/* Planez les effets pour les boutons */
+.commander-container .commander-submit:hover,
+.commander-button:hover {
+  opacity: 2;
+}
+/* Couche de couleur semi-transparente pour assombrir la page */
+.commander-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.564);
+  z-index: 8;
+  display: none;
+}
+
+/*fin du popup*/
+/*2em popup*/
+.confirmation-popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.confirmation-form {
+  background-color: #281f1f;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #ffffff;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+}
+
+
+/*fin du 2em popup*/
+/*les autres*/
+
+.hide {
+  display: none;
+}
+.textmessage {
+  border: 2px solid #000000;
+  width: 182px;
+  height: 191px;
+  border-radius:10px;
+}
+table{
+  border: 2px solid #000000;
+  background-color: #be4545;
+  border-radius: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+table img{
+  border: 2px solid #000000;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+/* fin les autres*/
+
+
+
+
+
+
